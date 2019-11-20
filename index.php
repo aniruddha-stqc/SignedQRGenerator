@@ -12,8 +12,8 @@ and open the template in the editor.
     <body>
 
         <?php
-        error_reporting(E_ALL);
-        require 'phpqrcode/phpqrcode/qrlib.php'; 
+        //error_reporting(E_ALL);
+        //require 'phpqrcode/phpqrcode/qrlib.php'; 
         //Function definition
         
         function get_digital_signature($p_keystore_filepath, $p_keystore_password, $p_data_to_sign, &$p_signature) {
