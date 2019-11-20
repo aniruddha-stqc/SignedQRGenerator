@@ -23,7 +23,7 @@ and open the template in the editor.
             $cert_store = file_get_contents($keystore_filepath);
             if (empty($cert_store)) {
                 echo "Error: Unable to read the p12 file<br><br>";
-                exit;
+                return false;
             } else {
                 $keystore_password = $p_keystore_password;
                 // openssl_pkcs12_read — Parse a PKCS#12 Certificate Store into an array
@@ -71,7 +71,7 @@ and open the template in the editor.
                             return false;
                         }
                     } else {
-                        echo "Error: Unable to export the private key<br><br>";
+                        echo "Error: Unable to fetch the private key<br><br>";
                         return false;
                     }
                 } else {
@@ -86,7 +86,7 @@ and open the template in the editor.
         $status = get_digital_signature("keystore.p12", "password", $data_to_sign, $signature);
         
         if( $status ){
-            //echo '<pre>'.$signature.'<pre>';
+            echo "QR Text<br><br>";
             $qr_data = $data_to_sign."##".$signature;
             echo '<pre>'.$qr_data.'<pre>';;
            
