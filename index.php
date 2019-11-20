@@ -94,7 +94,7 @@ and open the template in the editor.
             //QRcode::png('PHP QR Code  '); 
         }
         else{
-            echo "Error";
+            echo "Unable to get digital signature";
         }
            
         ?>
