@@ -86,11 +86,12 @@ and open the template in the editor.
         $status = get_digital_signature("keystore.p12", "password", $data_to_sign, $signature);
         
         if( $status ){
+            //echo '<pre>'.$signature.'<pre>';
             $qr_data = $data_to_sign."##".$signature;
-            echo $qr_data;
+            echo '<pre>'.$qr_data.'<pre>';;
            
             //QRcode::png($qr_data, 'test.png', 'L', 4, 2); 
-            //QRcode::png('PHP QR Code '); 
+            //QRcode::png('PHP QR Code  '); 
         }
         else{
             echo "Error";
