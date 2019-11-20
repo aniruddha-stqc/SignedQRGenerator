@@ -82,10 +82,11 @@ and open the template in the editor.
         }
         
         //Invoke the function
-        $status = get_digital_signature("keystore.p12", "password", "TEST", $signature);
+        $data_to_sign = "HelloWorld";
+        $status = get_digital_signature("keystore.p12", "password", $data_to_sign, $signature);
         
         if( $status ){
-            $qr_data = "HelloWorld"."##".$signature;
+            $qr_data = $data_to_sign."##".$signature;
             echo $qr_data;
            
             //QRcode::png($qr_data, 'test.png', 'L', 4, 2); 
