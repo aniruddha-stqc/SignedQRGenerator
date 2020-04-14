@@ -1,5 +1,5 @@
 # SignedQRGenerator
-A PHP server side utilty to create a digitally signed QR code.
+A PHP server side utilty to create a digitally signed QR code. Digitally signed QR data helps to prevent forgery.
 
 Steps:
 1. Fetch private key from keystore
